@@ -1,0 +1,119 @@
+<div id="scripter-overview" class="ipsBox" style="width: 100%;">
+	<style>
+		input[type="button"], input[type="submit"] {
+			width:100%;
+			color:#000;
+			display:block;
+			margin:0 auto;
+		}
+		ul#useful-links {
+			list-style:none;
+			padding:16px;
+		}
+		ul#useful-links li {
+			display:inline-block;
+		}
+		ul#useful-links li a {
+			padding: 0 16px;
+		}
+		table#script-overview {
+			width:100%;
+			border-collapse:collapse;
+		}
+		table#script-overview th {
+			text-align:center;
+			border:1px solid #303030;
+		}
+		table#script-overview th.thin {
+			width:8%;
+		}
+		table#script-overview td a {
+			display:block;
+		}
+		table#script-overview tr.main-row td:first-child {
+			padding:8px 0 0 8px;
+		}
+		table#script-overview tr.sub-row td:first-child {
+			padding:0 0 8px 8px;
+		}
+		table#script-overview tr.main-row td:not(:first-child),
+		table#script-overview tr.sub-row td:not(:first-child),
+		table#script-overview tfoot td {
+			text-align:center;
+		}
+		table#script-overview tr.sub-row td,
+		table#script-overview tr.main-row td:not(:first-child) {
+			border-bottom:1px solid #303030;
+		}
+		table#script-overview tr[data-script-premium="false"].main-row td[data-id="trials-duration"] input {
+			display:none;
+		}
+		table#script-overview input[type="button"] {
+			width:32%;
+		}
+		div#controls {
+			padding:8px;
+			margin-top:8x;
+		}
+		div#controls div.extension-control-box {
+			width:256px;
+			height:128px;
+			padding:8px;
+		}
+		div#controls div.extension-control-box h1,
+		div#controls div.extension-control-box h3 {
+			text-align:center;
+		}
+	</style>
+	<ul id="useful-links">
+		<li><a href="https://osbot.org/mvc/scripters/info" target="_blank">Scripters' Info</a></li>
+		<li><a href="https://osbot.org/mvc/scripters/auth" target="_blank">Scripters' Auth</a></li>
+		<li><a href="https://osbot.org/gitweb/" target="_blank">OSBotGitweb</a></li>
+	</ul>
+	<form action="javascript:window.postMessage({ text:'SAVE_TRIAL_DURATION' }, '*');">
+		<table id="script-overview">
+			<thead>
+				<tr rowspan="2">
+					<th rowspan="2">Script<br><input name="refresh-script-overview" type="button" value="Refresh"></th>
+					<th colspan="4">Sales</th>
+					<th colspan="5">Trials</th>
+				</tr>
+				<tr>
+					<th class="thin">Users</th>
+					<th class="thin">Profit (&#36)</th>
+					<th class="thin">Latest (&#36)</th>
+					<th class="thin">Renewals</th>
+					<th class="thin">Total</th>
+					<th class="thin">Active</th>
+					<th class="thin">Inactive</th>
+					<th class="thin" colspan="2">Duration (Minutes)</th>
+				</tr>
+			</thead>
+			<tbody style="visibility:hidden;"></tbody>
+			<tfoot>
+				<tr>
+					<td>&nbsp;</td>
+					<td id="total-users"></td>
+					<td id="total-profit"></td>
+					<td id="total-profit-latest"></td>
+					<td id="total-renewals"></td>
+					<td id="total-trials"></td>
+					<td id="total-trials-active"></td>
+					<td id="total-trials-expired"></td>
+					<td colspan="2">
+						<input type="submit" value="Save">
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+	</form>
+	<div id="controls">
+		<div id="auto-auth" class="extension-control-box ipsfocusBox-inner">
+			<form action="javascript:window.postMessage({ text:'TOGGLE_AUTO_AUTH' }, '*');">
+				<h1>Auto Authenticator</h1>
+				<h3>00:00:00</h3>
+				<input type="submit" value="Start">
+			</form>
+		</div>
+	</div>
+</div>

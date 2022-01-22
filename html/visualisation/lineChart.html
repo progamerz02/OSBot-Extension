@@ -1,0 +1,33 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("current", {"packages":["corechart"]});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable(chart.data);
+
+      var options = {
+        title: "chart.title",
+		subtitle: "chart.sub-title",
+        curveType: "function",
+        legend: { position: "bottom" },
+		hAxis: { title: "chart.xAxis" },
+        vAxis: { title: "chart.yAxis" },
+		chartArea: {
+		  top: "0px",
+		  left: "0px"
+		}
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById("curve-chart"));
+
+      chart.draw(data, options);
+    }
+  </script>
+</head>
+<body>
+  <div id="curve-chart" style="width: 600px; height: 500px; margin:0 auto;"></div>
+</body>
+</html>

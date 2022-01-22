@@ -1,0 +1,59 @@
+<div id="trial-new">
+	<style>
+		div#trial-new {
+			padding-top: 16px;
+		}
+		div#trial-new ul#trial-new-search-users {
+		    overflow-y: scroll;
+			height: 150px;
+			max-height: 150px;
+			list-style: none;
+			padding: 4px 16px;
+		}
+		div#trial-new ul#trial-new-search-users li > * {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		div#trial-new ul#trial-new-search-users li img {
+			width: 32px;
+			height: 32px;
+		}
+		div#trial-new label {
+			padding: 8px;
+		}
+		div#trial-new input[name="user"] {
+			margin-right: 4px;
+		}
+		div#trial-new input[name="search"] {
+			margin: 0 auto;
+			width: 88%;
+			height: inherit;
+			border-radius: 4px 0 0 4px;
+		}
+		div#trial-new input[name="search-button"] {
+			width: 64px;
+			height: inherit;
+			color: #000;
+		}
+		div#trial-new input[type="submit"] {
+			display: block;
+			width: 100%;
+			height: 35px;
+			color: #000;
+		}
+		div#trial-new span#search-bar > * {
+			display: inline-block;
+		}
+		div#trial-new span#search-bar {
+			display: block;
+			height: 32px;
+			text-align: center;
+		}
+	</style>
+	<span id="search-bar"><!--
+		--><input name="search" type="text" placeholder="Search for user" autocomplete="off"><!--
+		--><input name="search-button" type="button" value="Search"><!--
+	--></span>
+	<ul id="trial-new-search-users"><p><i>Leave the selection blank to assign yourself a permanent trial.</i></p></ul>
+	<input type="Submit" value="Submit">
+</div>

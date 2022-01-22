@@ -1,0 +1,89 @@
+<form>
+	<table id="script-overview" style="width:100%; border-collapse:collapse;">
+		<style>
+			table#script-overview a.not-active {
+				pointer-events:none;
+				cursor:default;
+				text-decoration:none;
+			}
+			table#script-overview input[type="button"],
+			table#script-overview input[type="submit"] {
+				width:100%;
+				color:#000;
+				display:block;
+				margin:0 auto;
+			}
+			table#script-overview input[type="button"][name="refresh-script-overview"] {
+				width:32%;
+			}
+			table#script-overview th {
+				text-align:center;
+				border:1px solid #303030;
+			}
+			table#script-overview th.thin {
+				width:8%;
+			}
+			table#script-overview td a:not(.error) {
+				display:block;
+			}
+			table#script-overview td a.error {
+				font-style:italic;
+				color:red;
+			}
+			table#script-overview td a.error:after {
+				content:"\26a0";
+			}
+			table#script-overview tr.main-row td:first-child {
+				padding:8px 0 0 8px;
+			}
+			table#script-overview tr.sub-row td:first-child {
+				padding:0 0 8px 8px;
+			}
+			table#script-overview tr.main-row td:not(:first-child),
+			table#script-overview tr.sub-row td:not(:first-child),
+			table#script-overview tfoot td {
+				text-align:center;
+			}
+			table#script-overview tr.sub-row td,
+			table#script-overview tr.main-row td:not(:first-child) {
+				border-bottom:1px solid #303030;
+			}
+			table#script-overview tr[data-script-premium="false"].main-row td[data-id="trials-duration"] input {
+				display:none;
+			}
+		</style>
+		<thead>
+			<tr rowspan="2">
+				<th rowspan="2">Script<br><input name="refresh-script-overview" type="button" value="Refresh"></th>
+				<th colspan="4">Sales</th>
+				<th colspan="5">Trials</th>
+			</tr>
+			<tr>
+				<th class="thin">Users</th>
+				<th class="thin">Profit (&#36)</th>
+				<th class="thin">Latest (&#36)</th>
+				<th class="thin">Renewals</th>
+				<th class="thin">Total</th>
+				<th class="thin">Active</th>
+				<th class="thin">Inactive</th>
+				<th class="thin" colspan="2">Duration (Hours)</th>
+			</tr>
+		</thead>
+		<tbody style="visibility:hidden;"></tbody>
+		<tfoot>
+			<tr>
+				<td>&nbsp;</td>
+				<td id="all-sales-users"><a href="javascript:window.postMessage({action:'all-sales-users'}, '*');"></a></td>
+				<td id="all-sales-profit"><a href="javascript:window.postMessage({action:'all-sales-profit'}, '*');"></a></td>
+				<td id="all-sales-latest"><a href="javascript:window.postMessage({action:'all-sales-latest'}, '*');"></a></td>
+				<td id="all-sales-renewals"><a href="javascript:window.postMessage({action:'all-sales-renewals'}, '*');"></a></td>
+				<td id="all-trial-total"><a href="javascript:window.postMessage({action:'all-trial-total'}, '*');"></a></td>
+				<td id="all-trial-active"><a href="javascript:window.postMessage({action:'all-trial-active'}, '*');"></a></td>
+				<td id="all-trial-expired"><a href="javascript:window.postMessage({action:'all-trial-expired'}, '*');"></a></td>
+				<td colspan="2">
+					<input name="save-trial-durations" type="button" value="Save">
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+</form>

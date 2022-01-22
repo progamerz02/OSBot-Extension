@@ -1,0 +1,2 @@
+http://osbot.org/mvc/scripters/info
+https://osbot.org/mvc/scripters/auth

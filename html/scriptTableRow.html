@@ -1,0 +1,77 @@
+<tr
+  class="main-row"
+  data-script-id="script.id"
+  data-script-name="script.name"
+  data-script-url="script.url"
+  data-nexus-id="script.nexusId"
+  data-mcv-sales-url-code="script.salesUrlCode"
+  data-script-premium="script.premium"
+  data-stacktrace-url="script.reverseStacktraceUrl"
+  data-stacktrace-code="script.reverseStacktraceCode"
+  data-stacktrace="script.stacktrace"
+  data-trial-records=""
+  data-sales-records=""
+>
+  <td style="display: flex; align-items: center">
+    <a href="script.url" target="_blank">script.name</a>
+    <a href="script.urlUnRead" target="_blank" style="margin-left: 1rem">→</a>
+  </td>
+  <td rowspan="2" data-id="sales-users">
+    <a
+      href="javascript:window.postMessage({scriptId:script.id, action:'sales-users'}, '*');"
+    ></a>
+  </td>
+  <td rowspan="2" data-id="sales-profit">
+    <a
+      href="javascript:window.postMessage({scriptId:script.id, action:'sales-profit'}, '*');"
+    ></a>
+  </td>
+  <td rowspan="2" data-id="sales-latest">
+    <a
+      href="javascript:window.postMessage({scriptId:script.id, action:'sales-latest'}, '*');"
+    ></a>
+  </td>
+  <td rowspan="2" data-id="sales-renewals">
+    <a
+      href="javascript:window.postMessage({scriptId:script.id, action:'sales-renewals'}, '*');"
+    ></a>
+  </td>
+  <td rowspan="2" data-id="trials-total">
+    <a
+      href="javascript:window.postMessage({scriptId:script.id, action:'trial-total'}, '*');"
+    ></a>
+  </td>
+  <td rowspan="2" data-id="trials-active">
+    <a
+      href="javascript:window.postMessage({scriptId:script.id, action:'trial-active'}, '*');"
+    ></a>
+  </td>
+  <td rowspan="2" data-id="trials-expired">
+    <a
+      href="javascript:window.postMessage({scriptId:script.id, action:'trial-expired'}, '*');"
+    ></a>
+  </td>
+  <td rowspan="2" data-id="trials-duration">
+    <input
+      name="trial-time-script.id"
+      type="number"
+      min="0"
+      step="1"
+      value="trial.trialTime"
+    /><input
+      type="button"
+      value="Add"
+      onclick="window.postMessage({scriptId:script.id, action:'add-trial'}, '*');"
+    />
+  </td>
+</tr>
+<tr class="sub-row" data-script-id="script.id" data-nexus-id="script.nexusId">
+  <td>
+    <a
+      class="script.lastCompiledClass"
+      href="javascript:window.postMessage({scriptId:script.id, action:'stacktrace'}, '*');"
+      >Last compiled: script.lastCompiled</a
+    >
+  </td>
+  <td>&nbsp;</td>
+</tr>

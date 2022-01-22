@@ -1,0 +1,56 @@
+<div id="popup-overlay" class="ipsModal">
+  <style>
+    section#popup {
+      position: absolute;
+      background-color: #fff;
+      margin: 0 auto;
+    }
+    section#popup header {
+      height: 32px;
+    }
+    section#popup header > * {
+      display: inline-block;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      vertical-align: top;
+    }
+    section#popup header h3 {
+      width: calc(100% - 32px);
+      text-align: center;
+      letter-spacing: 1.5px;
+      line-height: 2.25;
+    }
+    section#popup header input[name="close-popup"] {
+      width: 32px;
+      font-size: 20px;
+    }
+    section#popup main textarea {
+      width: 100%;
+      height: 100%;
+      resize: none;
+      word-wrap: normal;
+    }
+    .align-middle {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .ipsTabs_panels {
+      overflow: auto;
+    }
+  </style>
+  <form name="popup-form" action="javascript:void(0);">
+    <section id="popup" class="align-middle">
+      <header>
+        <!--
+				-->
+        <h3>Placeholder</h3>
+        <!--
+				--><input type="button" name="close-popup" value="×" /><!--
+			-->
+      </header>
+      <main class="ipsTabs_panels"></main>
+    </section>
+  </form>
+</div>
