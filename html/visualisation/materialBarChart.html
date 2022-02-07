@@ -1,9 +1,15 @@
 <html>
   <head>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%7CRoboto:medium">
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto%7CRoboto:medium"
+    />
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
     <script type="text/javascript">
-      google.charts.load("current", {"packages":["bar"]});
+      google.charts.load("current", { packages: ["bar"] });
       google.charts.setOnLoadCallback(drawChart);
 
       function drawChart() {
@@ -12,18 +18,23 @@
         var options = {
           chart: {
             title: "chart.title",
-            subtitle: "chart.sub-title"
+            subtitle: "chart.sub-title",
           },
-          bars: "horizontal" // Required for Material Bar Charts.
+          bars: "horizontal", // Required for Material Bar Charts.
         };
 
-        var chart = new google.charts.Bar(document.getElementById("material-bar-chart"));
+        var chart = new google.charts.Bar(
+          document.getElementById("material-bar-chart")
+        );
 
         chart.draw(data, google.charts.Bar.convertOptions(options));
       }
     </script>
   </head>
   <body>
-    <div id="material-bar-chart" style="width: chart.width; height: chart.height;"></div>
+    <div
+      id="material-bar-chart"
+      style="width: chart.width; height: chart.height"
+    ></div>
   </body>
 </html>
